@@ -9,13 +9,7 @@ interface ConnectModalProps {
   onClose: () => void;
 }
 
-const ConnectModal: React.FC<ConnectModalProps> = ({ isOpen, onClose }) => {
-  const { connect, isLoading } = useWeb3();
 
-  const handleConnectMetaMask = async () => {
-    await connect();
-    onClose();
-  };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
